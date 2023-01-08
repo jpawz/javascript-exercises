@@ -1,8 +1,5 @@
 const sumAll = function(start, end) {
-    if((typeof start !== 'number') 
-        || (typeof end !== 'number')
-        || (start < 0)
-        || (end < 0)) {
+    if(parametersAreInvalid(start, end)) {
         return "ERROR";
     }
 
@@ -19,6 +16,13 @@ const sumAll = function(start, end) {
 
     return sum;
 };
+
+const parametersAreInvalid = function(start, end) {
+    return (typeof start !== 'number') 
+    || (typeof end !== 'number')
+    || (start < 0)
+    || (end < 0)
+}
 
 // Do not edit below this line
 module.exports = sumAll;
